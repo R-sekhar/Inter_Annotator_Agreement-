@@ -30,7 +30,7 @@ jobs:
         run: python "python code.py"
 
       - name: Upload results artifact
-  uses: actions/upload-artifact@v3
-  with:
-    name: AnnotationResults
-    path: Final_Result.xlsx
+        uses: actions/upload-artifact@v3
+        with:
+          name: AnnotationResults
+          path: Final_Result.xlsx
