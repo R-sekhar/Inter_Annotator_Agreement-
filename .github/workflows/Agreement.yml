@@ -27,7 +27,7 @@ jobs:
           fi
 
       - name: Run Python Code
-        run: python "python code.py"
+        run: python "python_code.py"
 
       - name: Upload results artifact
         uses: actions/upload-artifact@v4
