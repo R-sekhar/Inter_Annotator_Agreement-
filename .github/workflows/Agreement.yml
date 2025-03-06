@@ -2,8 +2,8 @@ name: Annotation Agreement Calculation
 
 on:
   push:
-    branches: [ main ]         # Run on pushes to the main branch (adjust as needed)
-  workflow_dispatch:           # Allow manual triggering of the workflow
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   run-agreement:
@@ -26,11 +26,11 @@ jobs:
             pip install pandas scikit-learn
           fi
 
-      - name: python code 
-        run: python python code.py
+      - name: Run Python Code
+        run: python "python code.py"
 
       - name: Upload results artifact
         uses: actions/upload-artifact@v3
         with:
-          name: AnnotationResults   # Artifact name
-          path: Final_Result.xlsx   # Path to the output Excel file
+          name: AnnotationResults
+          path: Final_Result.xlsx
